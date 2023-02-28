@@ -6,6 +6,6 @@ jobs:
     steps:
       - name: Print greeting
         run: |
-          echo ${{ github.repository.TEST }}
-          echo ${{ github.env.TESTT }}
+          echo ${{ env.TEST }}
+          echo ${{ env.TESTT }}
           echo ${{ github.repository }}
