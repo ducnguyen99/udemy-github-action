@@ -41,4 +41,6 @@ jobs:
       - name: Run test
         run: npm test
       - name: Echo env
-        run: echo "${{ env.VITE_DB }}"
+        run: |
+        echo "${{ env.VITE_DB }}"
+        echo "${{ secrets.MONGODB_PASSWORD }}"
