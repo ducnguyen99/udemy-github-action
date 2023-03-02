@@ -1,5 +1,6 @@
 name: ENV TESTING
 on: push
+environment: qa
 env:
   VITE_DB: DB_USER_NAME
 jobs:
