@@ -1,6 +1,5 @@
 name: ENV TESTING
 on: push
-environment: qa
 env:
   VITE_DB: DB_USER_NAME
 jobs:
@@ -25,6 +24,7 @@ jobs:
   test:
     needs: lint
     runs-on: ubuntu-latest
+    environment: qa
     steps:
       - name: Get code
         uses: actions/checkout@v3
