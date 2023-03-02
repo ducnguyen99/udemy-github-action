@@ -34,13 +34,11 @@ jobs:
         run: npm ci
       - name: Test code
         run: npm run test
-      - name: Upload artifacts
+      - name: Upload test report
         uses: actions/upload-artifact@v3
         with:
-          name: dist-files
-          path: |
-            dist
-            package.json
+          name: test-report
+          path: test.json
   build:
     needs: test
     runs-on: ubuntu-latest
